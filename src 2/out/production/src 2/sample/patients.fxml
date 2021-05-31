@@ -21,7 +21,7 @@
     <TextField fx:id="lastNameText" prefWidth="400" promptText="Last Name" GridPane.columnIndex="3" GridPane.rowIndex="1" />
     <TextArea fx:id="patientListTextArea" prefWidth="830" prefHeight="190"
               editable="false" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="4" GridPane.rowSpan="1"
-              text="This will display the amount of infected people in the given area">
+              text="">
 
         <font>
             <Font name="Courier New" size="11.0" />

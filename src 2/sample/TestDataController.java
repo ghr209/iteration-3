@@ -6,6 +6,9 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 
+import java.sql.*;
+import java.util.ArrayList;
+
 public class TestDataController {
     //public GridPane grid;
     public Label empNumberLabel;
@@ -16,6 +19,7 @@ public class TestDataController {
     public TextField lastNameText;
     public Label LabelpostalCode;
     public TextField postalCodeText;
+    public TextArea employeeListTextArea;
     public TextArea InfectionlistTextArea;
     public Button Seach;
     public Button buttonClearAll;
@@ -101,6 +105,41 @@ public class TestDataController {
         // not finished!
 
 
+    }
+    public void initialize() {
+        String url = "jdbc:mysql://127.0.0.1:3306/?user=root";
+        String password = "Elkhattouti92";
+
+        String query = "SELECT PatientLokation, Count(*) as 'Number of incidents' FROM Corona.test WHERE TestResult= 'Positive' Group by PatientLokation order by count(*) desc;";
+
+        try (Connection con = DriverManager.getConnection(url, null, password);
+             Statement st = con.createStatement();
+             ResultSet rs = st.executeQuery(query)) {
+
+            ArrayList<TestData> testdata = new ArrayList<>();
+            while (rs.next()) {
+                String Lokation = rs.getString(1);
+                String NumberOfIn = rs.getString(2);
+                System.out.println("Postnummer: " + Lokation + " Antal positive: " + NumberOfIn);
+                TestData td = new TestData(NumberOfIn, "","","","", Lokation);
+                testdata.add(td);
+
+                //String TestResult = rs.getString(2);
+                //String TestMutation = rs.getString(3);
+                //int PatientLokation= rs.getInt(6);
+                //int PatientID= rs.getInt(7);
+                // System.out.println("TestID: " + TestID + " | TestResult: " + TestResult + " | TestMutation: " + TestMutation + "| Lokation " + PatientLokation +"| PatientID " + PatientID );
+            }
+            for (TestData t : testdata) {
+                String oldText = employeeListTextArea.getText();
+                String newText = "Postnummer: " + t.getpostalCode() + " Antal positive: "  + t.getTestSvar();
+                employeeListTextArea.setText(oldText + "\n" + newText);
+            }
+
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 
     public void onClearAll(ActionEvent actionEvent) {

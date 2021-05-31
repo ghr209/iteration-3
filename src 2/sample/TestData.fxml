@@ -17,7 +17,10 @@
     <TextField fx:id="postalCodeTextText" prefWidth="200" promptText="####" GridPane.columnIndex="1" GridPane.rowIndex="0" />
     <TextArea fx:id="employeeListTextArea" prefWidth="830" prefHeight="190"
               editable="false" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="4" GridPane.rowSpan="1"
-              text=" The number of infected patients will be displayed here">
+              text=" The sum of infected patients in the postal areas is desplayed below">
+
+
+
 
         <font>
             <Font name="Courier New" size="11.0" />

@@ -157,7 +157,6 @@ public class DataValidator {
             return false;
         }
         return result;
-
     }
 }
 

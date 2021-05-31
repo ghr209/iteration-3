@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.List;
+// Hjælp fra jakobs eksempel på multiscene
 
 public class Main extends Application {
     static VBox root;
