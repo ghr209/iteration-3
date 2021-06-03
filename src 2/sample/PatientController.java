@@ -17,10 +17,10 @@ public class PatientController {
     public TextField firstNameText;
     public Label labelLastName;
     public TextField lastNameText;
-    public Label labelPhone;
-    public TextField phoneText;
-    public TextField emailText;
-    public Label labelEmail;
+     // public Label labelPhone;
+     // public TextField phoneText;
+     // public TextField emailText;
+     // public Label labelEmail;
     public TextArea patientListTextArea;
     public Button buttonAdd;
     public Button buttonClearAll;

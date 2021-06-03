@@ -8,7 +8,8 @@ public class DatabaseConnection {
         String password = "Elkhattouti92";
 
         String query = "SELECT PatientLokation, Count(*) as 'Number of incidents' FROM Corona.test WHERE TestResult= 'Positive' Group by PatientLokation order by count(*) desc;";
-
+// Select * from corona.test WHERE (TimeOfTest BETWEEN '2021-04-21 00:00:00' AND '2021-04-22 00:00:00') AND TestResult='Positive'
+// Select * from corona.test WHERE (TimeOfTest BETWEEN '2021-04-21 00:00:00' AND '2021-04-22 00:00:00') AND TestResult='Positive' AND PatientLokation='2300'
         try (Connection con = DriverManager.getConnection(url, null, password);
              Statement st = con.createStatement();
              ResultSet rs = st.executeQuery(query)) {

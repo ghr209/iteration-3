@@ -31,6 +31,7 @@
     <Button fx:id="buttonClearAll" text="Clear all" GridPane.columnIndex="0" GridPane.rowIndex="6" onAction="#onClearAll"/>
     <Button fx:id="buttonAccessLocation" text="Access Patient's Location" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
     <Button fx:id="buttonViewTestResult" text="View Patient's Testresults" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+    <Button fx:id="buttonViewPatient" text=" View Patient" GridPane.columnIndex="0" GridPane.rowIndex="4" />
 
    <columnConstraints>
       <ColumnConstraints />

@@ -19,7 +19,7 @@ public class TestDataController {
     public TextField lastNameText;
     public Label LabelpostalCode;
     public TextField postalCodeText;
-    public TextArea employeeListTextArea;
+    public TextArea IncidentListTextArea;
     public TextArea InfectionlistTextArea;
     public Button Seach;
     public Button buttonClearAll;
@@ -131,9 +131,9 @@ public class TestDataController {
                 // System.out.println("TestID: " + TestID + " | TestResult: " + TestResult + " | TestMutation: " + TestMutation + "| Lokation " + PatientLokation +"| PatientID " + PatientID );
             }
             for (TestData t : testdata) {
-                String oldText = employeeListTextArea.getText();
+                String oldText = IncidentListTextArea.getText();
                 String newText = "Postnummer: " + t.getpostalCode() + " Antal positive: "  + t.getTestSvar();
-                employeeListTextArea.setText(oldText + "\n" + newText);
+                IncidentListTextArea.setText(oldText + "\n" + newText);
             }
 
 
