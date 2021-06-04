@@ -24,7 +24,7 @@ public class Main extends Application {
         gridPaneList.add(FXMLLoader.load(getClass().getResource("TestData.fxml")));
 
         //root.getChildren().add(gridPanePatients);
-        primaryStage.setTitle("Clinic App");
+        primaryStage.setTitle("CoronaNet");
         Scene scene = new Scene(root, 1200, 500); // create a scene window 1200 x 500 pixels
         root.setStyle("-fx-background-image: " +
                 "url(\"https://i2.wp.com/churchmediadrop.com/wp-content/uploads/edd/2017/08/Welcome-Slide-2_720p.jpg?fit=1280%2C720&ssl=1\"); -fx-background-radius: 500;"

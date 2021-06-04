@@ -1,7 +1,9 @@
 package sample;
+//import jakarta.xml.bind.annotation.XmlRootElement;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
+//@XmlRootElement
 public class TestData {
     private String TestID;
     private String TestSvar;
@@ -9,7 +11,6 @@ public class TestData {
     private String TimeOfTest;
     private String TimeOfResult;
     private String postalCode;
-
 
 
     public TestData( String TestSvar, String Mutation, String TestID, String TimeOfTest, String TimeOfResult, String postalCode) {

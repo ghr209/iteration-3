@@ -23,6 +23,9 @@ public class TestDataController {
     public TextArea InfectionlistTextArea;
     public Button Seach;
     public Button buttonClearAll;
+    public Button buttonExport;
+    public ArrayList<TestData> testdata = new ArrayList<>();
+
 
     @FXML
     private GridPane grid;
@@ -116,7 +119,7 @@ public class TestDataController {
              Statement st = con.createStatement();
              ResultSet rs = st.executeQuery(query)) {
 
-            ArrayList<TestData> testdata = new ArrayList<>();
+            //ArrayList<TestData> testdata = new ArrayList<>();
             while (rs.next()) {
                 String Lokation = rs.getString(1);
                 String NumberOfIn = rs.getString(2);
@@ -136,7 +139,6 @@ public class TestDataController {
                 IncidentListTextArea.setText(oldText + "\n" + newText);
             }
 
-
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -145,6 +147,12 @@ public class TestDataController {
     public void onClearAll(ActionEvent actionEvent) {
         clearTextFields(grid);
     }
-
-
 }
+
+
+  //  public void onExport(ActionEvent actionEvent) {
+  //      try (JavatoXml.TestDataToXMLExample(testdata)) {
+
+ //       } catch  (Exception e) {
+ //           e.printStackTrace();
+ //       }
